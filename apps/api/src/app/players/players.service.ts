@@ -5,7 +5,7 @@ import { Player } from './interfaces/player.interface';
 
 @Injectable()
 export class PlayersService {
-  constructor(@Inject('CAT_MODEL') private readonly playerModel: Model<Player>) {}
+  constructor(@Inject('PLAYER_MODEL') private readonly playerModel: Model<Player>) {}
 
   async create(createPlayerDto: CreatePlayerDto): Promise<Player> {
     const createdPlayer = new this.playerModel(createPlayerDto);

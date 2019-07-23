@@ -5,15 +5,15 @@ import { Player } from './interfaces/player.interface';
 
 @Controller('players')
 export class PlayersController {
-  constructor(private readonly catsService: PlayersService) {}
+  constructor(private readonly playersService: PlayersService) {}
 
   @Post()
   async create(@Body() createPlayerDto: CreatePlayerDto) {
-    this.catsService.create(CreatePlayerDto);
+    this.playersService.create(createPlayerDto);
   }
 
   @Get()
   async findAll(): Promise<Player[]> {
-    return this.catsService.findAll();
+    return this.playersService.findAll();
   }
 }

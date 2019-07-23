@@ -4,6 +4,6 @@ export const databaseProviders = [
   {
     provide: 'DATABASE_CONNECTION',
     useFactory: async (): Promise<typeof mongoose> =>
-      await mongoose.connect('mongodb://localhost/esports', { useNewUrlParser: true }),
+      await mongoose.connect('mongodb://root:example@localhost/esports', { useNewUrlParser: true }),
   },
 ];

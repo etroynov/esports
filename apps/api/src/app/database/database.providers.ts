@@ -19,11 +19,8 @@ export const databaseProviders = [
     provide: 'DATABASE_CONNECTION',
     useFactory: async (): Promise<typeof mongoose> =>
       await mongoose.connect(
-        'mongodb://esports:pass@localhost/esports', {
-          useNewUrlParser: true,
-          auth: {
-            authdb:"admin"
-          }
+        'mongodb://localhost/esports', {
+          useNewUrlParser: true
         }
       ),
   },

@@ -9,7 +9,9 @@ export class PlayersController {
 
   @Post()
   async create(@Body() createPlayerDto: CreatePlayerDto) {
-    this.playersService.create(createPlayerDto);
+    if (Object.keys(createPlayerDto).length) {
+      this.playersService.create(createPlayerDto);
+    }
   }
 
   @Get()

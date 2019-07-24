@@ -5,10 +5,12 @@ services:
     image: mongo:latest
     container_name: 'mongodb'
     environment:
-      MONGO_INITDB_ROOT_USERNAME: "esports"
-      MONGO_INITDB_ROOT_PASSWORD: "pass"
+      #MONGO_INITDB_ROOT_USERNAME: esports
+      #MONGO_INITDB_ROOT_PASSWORD: 123
+      MONGO_INITDB_DATABASE: esports
     volumes:
       - ./data/db:/data/db
     ports:
-      - 27017:27017
+      - "27017:27017"
     command: mongod --smallfiles
+

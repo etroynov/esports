@@ -1,9 +1,14 @@
 version: '3.7'
 
 services:
-  mongo:
+  mongodb:
     image: mongo:latest
-    container_name: mongodb
-    restart: always
+    container_name: 'mongodb'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: "esports"
+      MONGO_INITDB_ROOT_PASSWORD: "pass"
+    volumes:
+      - ./data/db:/data/db
     ports:
       - 27017:27017
+    command: mongod --smallfiles

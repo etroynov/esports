@@ -1,4 +1,11 @@
+.container {
+  padding: 10px;
+  background-color: #021a2b;
+}
+
 .logo {
-  background: url(/assets/img/design/logo.png);
+  width: 200px;
+  height: 60px;
+  background: url(/assets/img/design/logo.png) center/contain no-repeat;
 }
 

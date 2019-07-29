@@ -1,7 +1,4 @@
 import { Document } from 'mongoose';
+import { IPlayer } from '@esports/data';
 
-export interface Player extends Document {
-  readonly name: string;
-  readonly age: number;
-  readonly breed: string;
-}
+export interface Player extends Document, IPlayer {}

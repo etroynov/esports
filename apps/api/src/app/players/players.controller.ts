@@ -15,6 +15,11 @@ export class PlayersController {
   }
 
   @Get()
+  async find(id: string): Promise<Player[]> {
+    return this.playersService.find(id);
+  }
+
+  @Get()
   async findAll(): Promise<Player[]> {
     return this.playersService.findAll();
   }

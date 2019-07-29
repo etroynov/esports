@@ -25,6 +25,12 @@
     },
     "data": {
       "tags": []
+    },
+    "dashboard-e2e": {
+      "tags": []
+    },
+    "dashboard": {
+      "tags": ["dashboard"]
     }
   }
 }

@@ -2,8 +2,9 @@
  * Vendor
  */
 
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /**
  * Modules
@@ -30,6 +31,7 @@ import { TeamsComponent } from './pages/teams/teams.component';
   declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, NewsComponent, TeamsComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' })
   ],
   providers: [],

@@ -9,6 +9,7 @@ export class PlayersController {
 
   @Post()
   async create(@Body() createPlayerDto: CreatePlayerDto) {
+    console.info(createPlayerDto);
     if (Object.keys(createPlayerDto).length) {
       this.playersService.create(createPlayerDto);
     }

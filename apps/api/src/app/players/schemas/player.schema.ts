@@ -6,4 +6,9 @@ export const PlayerSchema = new mongoose.Schema({
   nickname: String,
   age: Number,
   brith: Date,
+  slug: {
+    type: String,
+    required: true,
+    unique: true,
+  }
 });

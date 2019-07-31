@@ -1,5 +1,7 @@
 export class CreatePlayerDto {
-  readonly name: string;
+  readonly firstname: string;
+  readonly lastname: string;
+  readonly nickname: string;
   readonly age: number;
-  readonly breed: string;
+  readonly brith: string;
 }

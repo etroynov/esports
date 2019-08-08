@@ -10,8 +10,14 @@ export class PlayersService {
   ) {}
 
   async create(createPlayerDto: CreatePlayerDto): Promise<Player> {
-    const createdPlayer = new this.playerModel(createPlayerDto);
-    return await createdPlayer.save();
+    try {
+      const createdPlayer = new this.playerModel(createPlayerDto);
+      const res = await createdPlayer.save();
+
+      return res;
+    } catch(e) {
+      console.error(e);
+    }
   }
 
   async find(id: string): Promise<Player[]> {

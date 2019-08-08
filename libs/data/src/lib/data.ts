@@ -1,3 +1,7 @@
+/**
+ * Player
+ */
+
 export interface IPlayer {
   firtsname: string;
   lastname: string;
@@ -6,6 +10,10 @@ export interface IPlayer {
   birthDate: string;
   tournaments: ReadonlyArray<ITournament>;
 }
+
+/**
+ * Tournament
+ */
 
 export interface ITournament {
   name: string;
@@ -44,18 +52,27 @@ export interface ITournamentSeries {
   image: string;
 }
 
+export interface ITournamentType {
+  name: string;
+}
+
+/**
+ * Organization
+ */
+
 export interface IOrganizer {
   name: string;
   description: string;
   image: string;
 }
 
-export interface ITournamentType {
-  name: string;
-}
+/**
+ * Team
+ */
 
 export interface ITeam {
   name: string;
+  image: number;
   description: string;
-  image: string;
+  players: ReadonlyArray<any>;
 }

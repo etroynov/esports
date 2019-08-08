@@ -9,8 +9,12 @@ export class PlayersController {
 
   @Post()
   async create(@Body() createPlayerDto: CreatePlayerDto) {
-    if (Object.keys(createPlayerDto).length) {
-      this.playersService.create(createPlayerDto);
+    try {
+      if (Object.keys(createPlayerDto).length) {
+        this.playersService.create(createPlayerDto);
+      }
+    } catch(e) {
+      return e;
     }
   }
 

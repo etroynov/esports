@@ -18,14 +18,22 @@ import { NewsComponent } from './pages/news/news.component';
 import { TeamsComponent } from './pages/teams/teams.component';
 
 /**
+ * Modules
+ */
+
+import { AppRoutingModule } from './routing.module';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+
+/**
  * Expo
  */
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, NewsComponent, TeamsComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, NewsComponent, TeamsComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
